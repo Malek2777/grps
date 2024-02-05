@@ -74,10 +74,10 @@ void LD2420Component::dump_config() {
   LOG_NUMBER(TAG, "  Gate Select:", this->gate_select_number_);
   LOG_NUMBER(TAG, "  Gate Move Threshold:", this->gate_move_threshold_number_);
   LOG_NUMBER(TAG, "  Gate Still Threshold::", this->gate_still_threshold_number_);
-  //LOG_BUTTON(TAG, "  Apply Config:", this->apply_config_action);
-  //LOG_BUTTON(TAG, "  Revert Edits:", this->revert_config_action);
-  //LOG_BUTTON(TAG, "  Factory Reset:", this->factory_reset_action);
-  //LOG_BUTTON(TAG, "  Restart Module:", this->restart_module_action);
+  LOG_BUTTON(TAG, "  Apply Config:", this->apply_config_button_);
+  LOG_BUTTON(TAG, "  Revert Edits:", this->revert_config_button_);
+  LOG_BUTTON(TAG, "  Factory Reset:", this->factory_reset_button_);
+  LOG_BUTTON(TAG, "  Restart Module:", this->restart_module_button_);
   ESP_LOGCONFIG(TAG, "LD2420 Select:");
   LOG_SELECT(TAG, "  Operating Mode", this->operating_selector_);
   if (this->get_firmware_int_(ld2420_firmware_ver_) < CALIBRATE_VERSION_MIN) {
